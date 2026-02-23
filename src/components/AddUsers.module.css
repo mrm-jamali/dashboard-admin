@@ -1,0 +1,85 @@
+.container {
+  background: #f4f4f6; /* طوسی خیلی روشن */
+  padding: 28px;
+  border-radius: 16px;
+  width: 450px;
+  margin: 20px auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e0e0e0;
+}
+
+ .container h2 {
+  margin-bottom: 5px;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.inputGroup input,
+.inputGroup select {
+  padding: 8px;
+  border: 1px solid #d1d1d6;
+  border-radius: 10px;
+  transition: 0.25s ease;
+  font-size: 14px;
+  background: #fff;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  border-color: #7b68ee;
+  box-shadow: 0 0 6px rgba(123, 104, 238, 0.4);
+}
+
+.addBtn {
+  /* padding: 14px;
+  background: #7b68ee;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-weight: 500; */
+  padding: 10px 25px;
+    border:none;
+    border-radius: 5px;
+       background-color: blue;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.addBtn:hover {
+ background-color: #3e5bfb;
+  box-shadow: 0 4px 10px rgba(106, 90, 205, 0.3);
+}
+.preview {
+  margin-top: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+}

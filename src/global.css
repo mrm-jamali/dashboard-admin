@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+        background-color: #F8F9FA;
+ /* max-width: 1200px; */
+    /* height: 100vh; */
+    margin:0 auto;
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+  
+    
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
+}

@@ -1,0 +1,70 @@
+.statescards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 50px 0 25px 0;
+}
+
+.statescards .cards {
+  flex: 1 1 200px; /* responsive */
+  max-width: 250px;
+  height: 140px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+
+  /* گرادیانت ملایم */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  position: relative;
+  overflow: hidden;
+}
+
+.statescards .cards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* عنوان کارت */
+.statescards .cards .titlecard {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* آیکون */
+.statescards .cards .titlecard span:last-child {
+  font-size: 24px;
+}
+
+/* مقدار کارت */
+.statescards .cards .value {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* رنگ‌های اختصاصی برای هر کارت */
+.cards:nth-child(1) { background: linear-gradient(135deg, #66b1f7, #4a90e2); }
+.cards:nth-child(2) { background: linear-gradient(135deg, #51863f, #70b76b); }
+.cards:nth-child(3) { background: linear-gradient(135deg, #5b398b, #8e44ad); }
+.cards:nth-child(4) { background: linear-gradient(135deg, #dc9616, #f5b041); }
+
+/* ریسپانسیو موبایل */
+@media (max-width: 768px) {
+  .statescards {
+    justify-content: center;
+  }
+
+  .statescards .cards {
+    max-width: 90%;
+    margin: 10px 0;
+  }
+}

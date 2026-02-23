@@ -1,0 +1,126 @@
+
+.titleOrder{
+  margin:25px 2px;
+}
+.container{
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+ 
+    border: 2px solid #e2e8f0;
+}
+.orderHeaders {
+      background-color: #edf2f7;
+       border-radius: 10px 10px 0 0;
+       color: #333;
+}
+.orderHeaders,
+.orderItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  border-bottom:  2px solid #e2e8f0;
+    /* border-top: 2px solid #e2e8f0;
+  border-left: 2px solid #e2e8f0;
+    border-right: 2px solid #e2e8f0; */
+
+}
+
+/* هدر */
+.orderHeaders {
+  /* background: #f7f7f7; */
+  font-weight: bold;
+}
+
+
+/* ستون‌ها — نسبت‌های منطقی */
+.col-id {
+  flex: 1;
+  min-width: 80px;
+}
+
+.col-amount {
+  flex: 1;
+  min-width: 100px;
+}
+
+.col-status {
+  flex: 1;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.col-date {
+  flex: 1;
+  min-width: 120px;
+  
+display: flex;
+justify-content: center;
+}
+
+/* آیتم */
+.orderItem {
+  transition: 0.2s;
+}
+
+.orderItem:hover {
+  background: #fafafa;
+}
+
+/* وضعیت */
+/* .orderStatus {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+} */
+
+.orderStatus {
+  width: 100px;   /* ← محتوای status همیشه همین اندازه */
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: white;
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-block;
+}
+/* موبایل */
+@media (max-width: 600px) {
+  .orderHeaders {
+    display: none;
+  }
+
+  .orderItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .orderItem > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 110px; /* فضای عنوان */
+  }
+
+  /* نمایش عنوان‌ها در موبایل */
+  .orderItem > div::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .orderStatus {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,54 @@
+.containersidbar {
+  width: 280px; /* پهنای سایدبار */
+  background: #222;
+  color: #fff;
+  padding: 20px;
+ background-color: #F4F5F7;
+  height: 100vh;
+ box-shadow: 3px 0 4px rgba(0, 0, 0, 0.14);
+
+
+
+
+}
+
+.containersidbar ul {
+  list-style-type: none;
+   margin-top: 15px;
+}
+.containersidbar ul li {
+  display: flex;
+  /* background-color: rgb(230, 137, 15); */
+  /* margin-top: 5px; */
+  /* justify-content: center; */
+  align-items: center;
+}
+.containersidbar ul li a {
+  color: rgb(24, 24, 70);
+  display: block;
+  padding: 12px 18px;
+  /* background: #f3f6ff; */
+  /* border-radius: 8px; */
+  text-decoration: none;
+  color: #1c222e;
+  font-weight: 500;
+ 
+  font-size:22px;
+}
+.containersidbar ul li {
+ transition:all 0.3s ease-in-out;
+ margin-top: 5px;
+}
+.containersidbar ul li:hover {
+background-color: #d3e3f4;
+  padding: 15px;
+  border-radius: 5px;
+  color: #0a58ca;
+}
+@media  (min-width: 769px)  and  (max-width: 1100px) {
+  .containersidbar {
+  width:200px;
+}}
+@media (max-width: 768px) {
+
+}

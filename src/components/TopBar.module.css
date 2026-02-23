@@ -1,0 +1,237 @@
+.containertop {
+  background-color: rgb(28, 39, 102);
+  color: white;
+  position: relative;
+  width: 100%;
+}
+
+.containertop .cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containertop div .wellcome {
+  width: 20%;
+  background-color: rgb(40, 54, 133);
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+}
+
+.containertop div .wellcome div {
+  display: flex;
+}
+
+.containertop div .wellcome .hamburger {
+  display: none;
+}
+
+.containertop div .wellcome h2 {
+  color: white;
+}
+
+.containertop div .secondpart {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 50%;
+}
+
+.containertop div .thierdpart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
+
+.containertop div .thierdpart span {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.thierdpart .notibell {
+  position: relative;
+}
+
+.notifi {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  right: -8px;
+  top: 17px;
+}
+
+.containertop div .thierdpart span img {
+  border-radius: 50%;
+  border: 2px solid rgb(55, 54, 97);
+}
+
+.adminMenu {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 75px;
+  z-index: 100;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  font-family: "Arial", sans-serif;
+  opacity: 0;
+  transform: scale(0.95) translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.adminMenu.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+
+.adminMenu .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.adminMenu .info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.adminMenu .info span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.adminMenu .info span .username {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: #222;
+}
+
+.adminMenu .info span p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+.btnlogout {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 15px;
+  gap: 6px;
+}
+
+.btnlogout button {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btnlogout button:hover {
+  background-color: blue;
+  color: white;
+  transform: scale(1.02);
+}
+
+/* ریسپانسیو برای موبایل بزرگتر */
+@media (max-width: 768px) {
+  .containertop .cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .containertop .cont .wellcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 15px;
+  }
+  .containertop .cont .wellcome div {
+    display: flex;
+    flex-direction: row;
+  }
+  .containertop .cont .wellcome .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .containertop .cont .secondpart {
+    width: 100%;
+    justify-content: center;
+    padding: 22px;
+    text-align: left !important;
+    position: relative;
+  }
+
+  .containertop .cont .thierdpart {
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+  .thierdpart .divider {
+    display: none;
+  }
+  .containertop div .thierdpart .notibell {
+    position: absolute;
+    right: 15px;
+    top: 70px;
+  }
+  .notifi {
+    top: 0;
+  }
+  .thierdpart .avatar {
+    position: absolute;
+    left: 15px;
+    top: 70px;
+  }
+  .containertop div .thierdpart span img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .adminMenu {
+    right: 50%;
+    transform: translateX(50%) scale(0.95);
+    top: 130px;
+  }
+}
+
+@media (max-width: 320px) {
+  .adminMenu {
+    right:70px; 
+    transform: scale(0.95); 
+    top: 130px; 
+  }
+}

@@ -1,0 +1,119 @@
+.row {
+  display: flex;
+  align-items: center;
+  padding: 10px 22px;
+  border-bottom: 1px solid #d3dce3;
+}
+
+/* ردیف عنوان */
+.header {
+  font-weight: bold;
+  background: #e8f0ff;
+}
+
+.col1 img {
+    border-radius: 50%;
+}
+ .editbtn{
+    border: none;
+    background-color: none;
+    color:blue;
+    margin-right:30px;
+
+}
+
+.col6 .delbtn{
+    border: none;
+    background-color: none;
+    color:red;
+}
+/* ستون‌ها (Flex + عرض‌ ثابت) */
+.col1 { width: 70px; }
+.col2 { width: 120px; }
+.col3 { width: 240px; }
+.col4 { width: 140px;
+display: flex;justify-content:flex-start;
+}
+.editbtn {
+  margin-left: 15px;
+  width: 35px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f5f7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #304ffe;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.editbtn:hover {
+  background-color: #304ffe;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(48, 79, 254, 0.25);
+}
+
+.editbtn:active {
+  transform: scale(0.95);
+}
+
+.editbtn svg {
+  font-size: 18px;
+}
+.savebtn {
+  margin-left: 8px;
+  padding: 6px 14px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background-color: #304ffe;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(48, 79, 254, 0.35);
+}
+
+.savebtn:hover {
+  background-color: #1e3aff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(48, 79, 254, 0.4);
+}
+
+.savebtn:active {
+  transform: scale(0.96);
+}
+
+.savebtn:disabled {
+  background-color: #9fa8ff;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+
+.col5 { width: 150px; }
+.col6 { width: 120px; display: flex; gap: 10px;cursor: pointer; }
+
+
+@media  (min-width: 870px)  and  (max-width: 1200px) {
+  .col1 { width: 50px;font-size: 11px; }
+.col2 { width: 70px;font-size: 11px; }
+.col3 { width: 150px;font-size: 11px; }
+.col4 { width: 100px;font-size: 11px;}
+.col5 { width: 100px; }
+.col6 { width: 120px; display: flex; gap: 10px;cursor: pointer; }
+}
+
+/* @media  (min-width: 769px)  and  (max-width:869px) {
+.col1 { width: 50px;font-size: 11px; }
+.col2 { width: 70px;font-size: 11px;background-color: #9fa8ff; }
+.col3 { width: 150px;font-size: 11px; }
+.col4 { width: 100px;font-size: 11px;background-color: yellow;}
+.col5 { width: 100px; }
+.col6 { width: 120px; display: flex; gap: 10px;cursor: pointer; }
+} */

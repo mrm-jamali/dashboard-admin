@@ -1,0 +1,42 @@
+.card {
+  border: 1px solid gainsboro;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.actions button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit {
+  background-color: #304ffe;
+  color: white;
+}
+
+.save {
+  background-color: #1e3aff;
+  color: white;
+}
+
+.delete {
+  background-color: #f44336;
+  color: white;
+}

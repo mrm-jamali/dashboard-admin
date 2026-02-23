@@ -1,0 +1,111 @@
+.ticketSection {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  
+}
+
+/* جدول ستونی */
+.ticketsTable {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr; /* Subject, Status, Created, Priority */
+  gap: 0;
+  border-top: 2px solid #e2e8f0;
+  border-left: 2px solid #e2e8f0;
+    border-right: 2px solid #e2e8f0;
+     /* border-bottom: 2px solid #e2e8f0; */
+
+    /* border-radius: 10px; */
+}
+
+
+.ticketsTable div {
+  padding: 12px 10px;
+  border-bottom: 2px solid #e2e8f0;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/* هدر ستون‌ها */
+.ticketsHeader {
+  font-weight: 600;
+  background-color: #edf2f7;
+  text-transform: uppercase;
+     /* border-radius: 10px 10px 0 0; */
+}
+
+/* =============================== */
+/*      PRIORITY BADGE (SPAN)     */
+/* =============================== */
+
+.priorityHigh,
+.priorityMedium,
+.priorityLow {
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  /* یکسان‌سازی اندازه */
+  display: inline-flex;
+  justify-content: center;
+  min-width: 90px;
+}
+
+.priorityHigh {
+  background-color: #e53e3e;
+}
+
+.priorityMedium {
+  background-color: #dd6b20;
+}
+
+.priorityLow {
+  background-color: #38a169;
+}
+
+/* =============================== */
+/*        STATUS BADGE (SPAN)     */
+/* =============================== */
+
+.statusOpen,
+.statusPending,
+.statusClosed {
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  /* یکسان‌سازی اندازه */
+  display: inline-flex;
+  justify-content: center;
+  min-width: 90px;
+}
+
+.statusOpen {
+  background-color: #3182ce;
+}
+
+.statusPending {
+  background-color: #d69e2e;
+}
+
+.statusClosed {
+  background-color: #718096;
+}

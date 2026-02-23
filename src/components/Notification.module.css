@@ -1,0 +1,147 @@
+/* Container وقتی نوتیفیکیشن خالیه */
+.containernoinfo {
+  width: 380px;
+  position: absolute;
+  right: 80px;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #333;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* پنل اصلی */
+.panel {
+  width: 380px;
+  max-height: 500px; /* scroll اگر زیاد شد */
+  position: absolute;
+  right: 80px;
+  top: 70px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  font-family: "Arial", sans-serif;
+  z-index: 100;
+}
+
+/* بخش عنوان */
+.panel .firstcol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.panel .firstcol h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.panel .firstcol button {
+  border: none;
+  background-color: transparent;
+  color: #304ffe;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* بخش دیتاها */
+.panel .datalogs {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 15px;
+  gap: 8px;
+  overflow-y: auto; /* scroll اگر زیاد شد */
+}
+
+/* هر ردیف دیتا */
+.panel .datalogs .dataRow {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  border-bottom: 1px solid #c2c1c1;
+  padding: 8px 0;
+}
+
+/* گروه سمت چپ: icon + event + user */
+.panel .datalogs .dataRow .left {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* فاصله بین event و user */
+}
+
+.panel .datalogs .dataRow span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+}
+
+/* زمان */
+.panel .datalogs .dataRow p {
+  font-size: 12px;
+  color: #959494;
+  margin: 0;
+  white-space: nowrap; /* جلوگیری از رفتن به خط بعد */
+}
+
+/* دکمه clear */
+.panel .datalogs button.clearBtn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color:  #f0efef;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #959494;;
+}
+
+.panel .datalogs button.clearBtn:hover {
+  background-color:blue;
+  color:  white;
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+  .panel,
+  .containernoinfo {
+    width: 90%;             /* پهنای کمتر ولی حفظ نسبت‌ها */
+    max-height: 80vh;       /* ارتفاع حداکثر */
+    right: 5%;             /* فاصله از راست */
+    top:130px;              
+    transform: none;        /* وسط صفحه نیازه؟ میتونی translateX رو حذف کنی */
+    overflow-y: auto;       /* scroll اگر طول زیاد شد */
+    padding: 12px 15px;     /* همون padding دسکتاپ */
+  }
+
+  .panel .datalogs {
+    flex-direction: column; /* حفظ چینش ستونی */
+    gap: 8px;               /* همون فاصله‌ها */
+  }
+
+  .panel .firstcol {
+    flex-direction: row;    /* همان چینش دسکتاپ */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .panel .datalogs .dataRow {
+    display: flex; 
+            flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
