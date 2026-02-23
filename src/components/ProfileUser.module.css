@@ -1,32 +1,28 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    border: 2px solid gainsboro;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255);
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border: 2px solid gainsboro;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
 }
 .container .firstpart {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    margin:25px 0;
-    border-bottom: 1px solid rgb(133, 131, 131);
-    padding-bottom: 15px;
+  display: flex;
 
+  align-items: center;
+  margin: 25px 0;
+  border-bottom: 1px solid rgb(133, 131, 131);
+  padding-bottom: 15px;
 }
 .container div img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
-.container div  button {
-    margin-left: 15px;
-    border: none;
-    padding: 10px 15px;
-    background-color: blue;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+.container div button {
+  margin-left: 15px;
+  border: none;
+  padding: 10px 15px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-
-

@@ -20,20 +20,18 @@
   gap: 10px;
   padding: 12px 15px;
   border-bottom:  2px solid #e2e8f0;
-    /* border-top: 2px solid #e2e8f0;
-  border-left: 2px solid #e2e8f0;
-    border-right: 2px solid #e2e8f0; */
+   
 
 }
 
-/* هدر */
+
 .orderHeaders {
-  /* background: #f7f7f7; */
+
   font-weight: bold;
 }
 
 
-/* ستون‌ها — نسبت‌های منطقی */
+
 .col-id {
   flex: 1;
   min-width: 80px;
@@ -68,19 +66,10 @@ justify-content: center;
   background: #fafafa;
 }
 
-/* وضعیت */
-/* .orderStatus {
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  color: white;
-  font-weight: 500;
-  display: inline-block;
-  white-space: nowrap;
-} */
+
 
 .orderStatus {
-  width: 100px;   /* ← محتوای status همیشه همین اندازه */
+  width: 100px;   
   text-align: center;
   padding: 6px 0;
   border-radius: 20px;
@@ -90,7 +79,7 @@ justify-content: center;
   white-space: nowrap;
   display: inline-block;
 }
-/* موبایل */
+
 @media (max-width: 600px) {
   .orderHeaders {
     display: none;
@@ -108,10 +97,10 @@ justify-content: center;
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding-left: 110px; /* فضای عنوان */
+    padding-left: 110px; 
   }
 
-  /* نمایش عنوان‌ها در موبایل */
+  
   .orderItem > div::before {
     content: attr(data-label);
     position: absolute;

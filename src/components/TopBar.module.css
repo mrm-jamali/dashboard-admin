@@ -94,7 +94,9 @@
   opacity: 0;
   transform: scale(0.95) translateY(-10px);
   pointer-events: none;
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
 
 .adminMenu.show {
@@ -162,7 +164,6 @@
   transform: scale(1.02);
 }
 
-/* ریسپانسیو برای موبایل بزرگتر */
 @media (max-width: 768px) {
   .containertop .cont {
     flex-direction: column;
@@ -230,8 +231,8 @@
 
 @media (max-width: 320px) {
   .adminMenu {
-    right:70px; 
-    transform: scale(0.95); 
-    top: 130px; 
+    right: 70px;
+    transform: scale(0.95);
+    top: 130px;
   }
 }

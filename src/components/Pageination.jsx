@@ -1,12 +1,10 @@
-import React from 'react';
 import styles from "./Pageination.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 
 function Pageination({ currentPage, setCurrentPage, totalItems }) {
-  
   const itemsPerPage = 5;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
-  console.log(totalPages)
+  console.log(totalPages);
 
   const pageHandler = (num) => {
     setCurrentPage(num);
@@ -14,7 +12,7 @@ function Pageination({ currentPage, setCurrentPage, totalItems }) {
 
   const nextHandler = () => {
     if (currentPage < totalPages) {
-      setCurrentPage(prev => prev + 1);
+      setCurrentPage((prev) => prev + 1);
     }
   };
 

@@ -5,7 +5,7 @@
   border-bottom: 1px solid #d3dce3;
 }
 
-/* ردیف عنوان */
+
 .header {
   font-weight: bold;
   background: #e8f0ff;
@@ -27,7 +27,7 @@
     background-color: none;
     color:red;
 }
-/* ستون‌ها (Flex + عرض‌ ثابت) */
+
 .col1 { width: 70px; }
 .col2 { width: 120px; }
 .col3 { width: 240px; }

@@ -1,47 +1,45 @@
 .secondpart {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
 .secondpart input {
-    width: 45%;
-    padding: 10px;
-    border-radius: 5px;
-    /* border: none; */
+  width: 45%;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-/* wrapper برای input پسورد */
 .passwordWrapper {
-    position: relative;
-    width: 45%;
+  position: relative;
+  width: 45%;
 }
 
 .passwordWrapper input {
-    width: 100%;
-    padding: 10px;
-    padding-right: 40px; /* فضای کافی برای آیکون چشم */
-    border-radius: 5px;
-    /* border: none; */
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 5px;
+  /* border: none; */
 }
 
 .eyeIcon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #555; /* رنگ آیکون */
-    font-size: 18px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
 }
 
 .theirdpart {
-    margin-left: -13px !important;
+  margin-left: -13px !important;
 }
 
 .successBox {
-  background: #4caf50; /* سبز موفقیت */
+  background: #4caf50;
   color: white;
   padding: 12px 20px;
   border-radius: 10px;

@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
-import styles from "./TopBar.module.css";
-import { CiGrid41, CiBellOn } from "react-icons/ci";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { FiMenu } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import Notification from "./Notification";
+import styles from "./TopBar.module.css"
+import { CiGrid41, CiBellOn } from "react-icons/ci";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { FiMenu } from "react-icons/fi";
 
 function TopBar({ onMenuClick }) {
   const { currentUser, setCurrentUser, adminData } = useContext(UserContext);
@@ -41,7 +41,8 @@ function TopBar({ onMenuClick }) {
       }
     }
     document.addEventListener("mousedown", handleOutsideMenuClick);
-    return () => document.removeEventListener("mousedown", handleOutsideMenuClick);
+    return () =>
+      document.removeEventListener("mousedown", handleOutsideMenuClick);
   }, []);
 
   const displayHandler = () => setVisibleMenu((v) => !v);
@@ -51,15 +52,14 @@ function TopBar({ onMenuClick }) {
     navigate("/");
   };
 
- const profileHandler = () => {
-  setVisibleMenu(false);
-  if(currentUser.role === "admin") {
-    navigate("/admin/profile"); // مسیر ادمین
-  } else {
-    navigate("/user/profile"); // مسیر کاربر
-  }
-};
-
+  const profileHandler = () => {
+    setVisibleMenu(false);
+    if (currentUser.role === "admin") {
+      navigate("/admin/profile"); // مسیر ادمین
+    } else {
+      navigate("/user/profile"); // مسیر کاربر
+    }
+  };
 
   if (!currentUser) return null;
 
@@ -97,7 +97,7 @@ function TopBar({ onMenuClick }) {
               {currentUser.role === "admin"
                 ? adminData.notifications.length
                 : adminData.notifications.filter(
-                    (n) => n.user === currentUser.username
+                    (n) => n.user === currentUser.username,
                   ).length}
             </span>
           </span>

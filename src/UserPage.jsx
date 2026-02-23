@@ -12,24 +12,18 @@ function UserPage() {
     return <div>Please log in...</div>;
   }
 
-  // فیلتر سفارش‌های کاربر
   const userOrders = adminData.orders.filter(
-    (order) => order.user === currentUser.username
+    (order) => order.user === currentUser.username,
   );
 
-  // فیلتر تیکت‌های کاربر
   const userTickets = adminData.tickets.filter(
-    (ticket) => ticket.user === currentUser.username
+    (ticket) => ticket.user === currentUser.username,
   );
 
-  // مجموع هزینه‌ها
   const totalSpent = userOrders.reduce((sum, order) => sum + order.amount, 0);
 
-  // میانگین هزینه سفارش‌ها
   const avgOrderAmount =
-    userOrders.length > 0
-      ? Math.round(totalSpent / userOrders.length)
-      : 0;
+    userOrders.length > 0 ? Math.round(totalSpent / userOrders.length) : 0;
 
   const DataCard = [
     {
@@ -39,7 +33,7 @@ function UserPage() {
     },
     {
       title: "Total Spent",
-      value: totalSpent.toLocaleString(), // با فرمت عدد راحت‌تر دیده می‌شه
+      value: totalSpent.toLocaleString(),
       icon: <LuShoppingBasket size={30} />,
     },
     {
@@ -57,7 +51,7 @@ function UserPage() {
   return (
     <div>
       <StatusCard DataCard={DataCard} />
-      <TicketUser  />
+      <TicketUser />
     </div>
   );
 }

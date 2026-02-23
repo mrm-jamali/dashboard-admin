@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
-import styles from "./UserRowMobile.module.css";
+
 import { UserContext } from "../context/UserContext";
+import styles from "./UserRowMobile.module.css";
 import { MdEdit } from "react-icons/md";
 import { FaRegTrashAlt } from "react-icons/fa";
 
@@ -23,7 +24,6 @@ function UserRowMobile({ user, onSaveRole }) {
 
   return (
     <div className={styles.card}>
-      
       <div className={styles.row}>
         <strong>Username:</strong> {user.username}
       </div>

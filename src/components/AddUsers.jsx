@@ -3,7 +3,6 @@ import { useContext, useState } from "react";
 
 import { UserContext } from "../context/UserContext";
 
-
 function AddUsers() {
   const { adminData, setAdminData } = useContext(UserContext);
 
@@ -15,13 +14,11 @@ function AddUsers() {
     role: "user",
   });
 
-  // هندل تغییر input ها
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  // هندل آپلود آواتار
   const handleAvatar = (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -30,11 +27,9 @@ function AddUsers() {
     setAvatar(imageUrl);
   };
 
-  // اضافه کردن کاربر
   const addHandler = (e) => {
     e.preventDefault();
 
-    // اضافه کردن فرم + آواتار به adminData
     setAdminData((prev) => ({
       ...prev,
       users: [...prev.users, { ...form, avatar }],
@@ -42,7 +37,6 @@ function AddUsers() {
 
     alert("User Added");
 
-    // ریست فرم و آواتار
     setForm({
       username: "",
       email: "",
@@ -101,7 +95,9 @@ function AddUsers() {
         <div className={styles.inputGroup}>
           <label>Avatar</label>
           <input type="file" accept="image/*" onChange={handleAvatar} />
-          {avatar && <img src={avatar} alt="preview" className={styles.preview} />}
+          {avatar && (
+            <img src={avatar} alt="preview" className={styles.preview} />
+          )}
         </div>
 
         <button className={styles.addBtn} type="submit">

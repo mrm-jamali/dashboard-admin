@@ -1,4 +1,3 @@
-/* Container وقتی نوتیفیکیشن خالیه */
 .containernoinfo {
   width: 380px;
   position: absolute;
@@ -14,10 +13,9 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* پنل اصلی */
 .panel {
   width: 380px;
-  max-height: 500px; /* scroll اگر زیاد شد */
+  max-height: 500px;
   position: absolute;
   right: 80px;
   top: 70px;
@@ -32,7 +30,6 @@
   z-index: 100;
 }
 
-/* بخش عنوان */
 .panel .firstcol {
   display: flex;
   justify-content: space-between;
@@ -63,23 +60,21 @@
   flex-direction: column;
   padding: 12px 15px;
   gap: 8px;
-  overflow-y: auto; /* scroll اگر زیاد شد */
+  overflow-y: auto;
 }
 
-/* هر ردیف دیتا */
 .panel .datalogs .dataRow {
   display: flex;
-  /* justify-content: space-between; */
+
   align-items: center;
   border-bottom: 1px solid #c2c1c1;
   padding: 8px 0;
 }
 
-/* گروه سمت چپ: icon + event + user */
 .panel .datalogs .dataRow .left {
   display: flex;
   align-items: center;
-  gap: 5px; /* فاصله بین event و user */
+  gap: 5px;
 }
 
 .panel .datalogs .dataRow span {
@@ -88,59 +83,56 @@
   color: #222;
 }
 
-/* زمان */
 .panel .datalogs .dataRow p {
   font-size: 12px;
   color: #959494;
   margin: 0;
-  white-space: nowrap; /* جلوگیری از رفتن به خط بعد */
+  white-space: nowrap;
 }
 
-/* دکمه clear */
 .panel .datalogs button.clearBtn {
   margin-top: 10px;
   padding: 8px 12px;
   font-size: 14px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  background-color:  #f0efef;
+  background-color: #f0efef;
   cursor: pointer;
   transition: all 0.25s ease;
-  color: #959494;;
+  color: #959494;
 }
 
 .panel .datalogs button.clearBtn:hover {
-  background-color:blue;
-  color:  white;
+  background-color: blue;
+  color: white;
 }
 
-/* ریسپانسیو برای موبایل */
 @media (max-width: 768px) {
   .panel,
   .containernoinfo {
-    width: 90%;             /* پهنای کمتر ولی حفظ نسبت‌ها */
-    max-height: 80vh;       /* ارتفاع حداکثر */
-    right: 5%;             /* فاصله از راست */
-    top:130px;              
-    transform: none;        /* وسط صفحه نیازه؟ میتونی translateX رو حذف کنی */
-    overflow-y: auto;       /* scroll اگر طول زیاد شد */
-    padding: 12px 15px;     /* همون padding دسکتاپ */
+    width: 90%;
+    max-height: 80vh;
+    right: 5%;
+    top: 130px;
+    transform: none;
+    overflow-y: auto;
+    padding: 12px 15px;
   }
 
   .panel .datalogs {
-    flex-direction: column; /* حفظ چینش ستونی */
-    gap: 8px;               /* همون فاصله‌ها */
+    flex-direction: column;
+    gap: 8px;
   }
 
   .panel .firstcol {
-    flex-direction: row;    /* همان چینش دسکتاپ */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
   .panel .datalogs .dataRow {
-    display: flex; 
-            flex-direction: row;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }

@@ -9,7 +9,6 @@ function EditUserProfile({ formData, setFormData }) {
   const [massageSuccess, setMassageSuccess] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  // فقط یک بار فرم را از currentUser مقداردهی اولیه می‌کنیم
   useEffect(() => {
     if (currentUser) {
       setFormData((prev) => ({
@@ -23,7 +22,6 @@ function EditUserProfile({ formData, setFormData }) {
         password: currentUser.password,
       }));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const editHandler = (e) => {
@@ -32,7 +30,7 @@ function EditUserProfile({ formData, setFormData }) {
 
   const saveHandler = () => {
     setCurrentUser(formData);
-   setMassageSuccess("Changes saved ✅");
+    setMassageSuccess("Changes saved ✅");
     setTimeout(() => setMassageSuccess(""), 2500);
   };
 
@@ -48,7 +46,7 @@ function EditUserProfile({ formData, setFormData }) {
         password: currentUser.password,
       });
     }
-   setMassageSuccess("Changes canceled ❌");
+    setMassageSuccess("Changes canceled ❌");
 
     setTimeout(() => setMassageSuccess(""), 2000);
   };

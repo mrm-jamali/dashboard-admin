@@ -1,10 +1,9 @@
-import React from 'react'
-import styles from "./StatsCard.module.css"
+import React from "react";
+import styles from "./StatsCard.module.css";
 
-function StatusCard({DataCard}) {
-
+function StatusCard({ DataCard }) {
   return (
-   <div className={styles.statescards}>
+    <div className={styles.statescards}>
       {DataCard.map((card, index) => (
         <div key={index} className={styles.cards}>
           <div className={styles.titlecard}>
@@ -13,15 +12,10 @@ function StatusCard({DataCard}) {
           </div>
 
           <span className={styles.value}>{card.value}</span>
-        </div> 
+        </div>
       ))}
     </div>
-
-
-
-
-
-  )
+  );
 }
 
-export default StatusCard
+export default StatusCard;

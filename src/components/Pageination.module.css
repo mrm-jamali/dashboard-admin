@@ -5,11 +5,10 @@
   gap: 8px;
   margin-top: 20px;
   user-select: none;
-  margin-right:25px;
+  margin-right: 25px;
   margin-bottom: 25px;
 }
 
-/* شماره صفحه‌ها */
 .pagination span {
   display: flex;
   align-items: center;
@@ -18,25 +17,23 @@
   height: 36px;
   padding: 0 10px;
   border-radius: 6px;
-         background-color: blue;
-    color:white;
+  background-color: blue;
+  color: white;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-/* hover روی شماره‌ها */
 .pagination span:hover {
- background-color: #3e5bfb;}
+  background-color: #3e5bfb;
+}
 
-/* صفحه فعال */
 .active {
   background-color: #2563eb;
   color: #fff;
   font-weight: bold;
 }
 
-/* دکمه Next */
 .NextBtn {
   display: flex;
   align-items: center;
@@ -51,7 +48,6 @@
   transition: background-color 0.2s ease;
 }
 
-/* hover دکمه Next */
 .NextBtn:hover {
   background-color: #020617;
 }

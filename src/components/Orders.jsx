@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 
 import { UserContext } from "../context/UserContext";
 import styles from "./Orders.module.css";
@@ -38,7 +38,6 @@ function Orders() {
 
         {orders.map((order) => (
           <div key={order.orderId} className={styles.orderItem}>
-            
             <div className={styles["col-id"]} data-label="Order ID">
               {order.orderId}
             </div>
@@ -59,7 +58,6 @@ function Orders() {
             <div className={styles["col-date"]} data-label="Order Date">
               {order.date}
             </div>
-
           </div>
         ))}
       </div>

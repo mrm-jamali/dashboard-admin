@@ -22,7 +22,6 @@ function ProfileUser() {
 
   const [openFileDialogFn, setOpenFileDialogFn] = useState(null);
 
-
   useEffect(() => {
     if (currentUser) {
       setFormData({
@@ -39,7 +38,6 @@ function ProfileUser() {
 
   const changePassword = () => setIsChangingPassword(true);
 
- 
   const handlePasswordChange = (newPassword) => {
     const updatedUser = { ...currentUser, password: newPassword };
     setCurrentUser(updatedUser);

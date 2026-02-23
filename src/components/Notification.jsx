@@ -6,7 +6,6 @@ import { ImNotification } from "react-icons/im";
 const Notification = forwardRef(({ open, setOpen }, ref) => {
   const { adminData, setAdminData, currentUser } = useContext(UserContext);
 
-  // فیلتر کردن نوتیفیکیشن‌ها بسته به نقش
   const notifications =
     currentUser.role === "admin"
       ? adminData.notifications
@@ -24,7 +23,7 @@ const Notification = forwardRef(({ open, setOpen }, ref) => {
       setAdminData((prev) => ({
         ...prev,
         notifications: prev.notifications.filter(
-          (n) => n.user !== currentUser.username
+          (n) => n.user !== currentUser.username,
         ),
       }));
     }
@@ -55,9 +54,11 @@ const Notification = forwardRef(({ open, setOpen }, ref) => {
         {notifications.slice(0, showCount).map((n, i) => (
           <div key={i} className={styles.dataRow}>
             <ImNotification style={{ color: "red", marginRight: 15 }} />
-            <span style={{ marginRight:-8,fontWeight:600 }}>{n.title}</span>
-            {n.user && <span style={{ marginLeft:10 ,fontWeight:600}}>:{n.user}</span>}
-            <p style={{ marginLeft: "auto"  }}>{n.time}</p>
+            <span style={{ marginRight: -8, fontWeight: 600 }}>{n.title}</span>
+            {n.user && (
+              <span style={{ marginLeft: 10, fontWeight: 600 }}>:{n.user}</span>
+            )}
+            <p style={{ marginLeft: "auto" }}>{n.time}</p>
           </div>
         ))}
 

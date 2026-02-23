@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
-import styles from "./LoginForm.module.css";
-import { UserContext } from "./context/UserContext";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "./context/UserContext";
+import styles from "./LoginForm.module.css";
 import { FaUserAlt } from "react-icons/fa";
 import { TbLockPassword } from "react-icons/tb";
 
@@ -11,7 +11,7 @@ function LoginForm() {
 
   const { users, admins } = adminData;
 
-  const [role, setRole] = useState(""); // نقش انتخاب نشده
+  const [role, setRole] = useState(""); 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -56,8 +56,6 @@ function LoginForm() {
     <div className={styles.container}>
       <form onSubmit={submitHandler}>
         <h2>User/Admin Login</h2>
-
-        {/* انتخاب نقش */}
         <select
           value={role}
           onChange={(e) => {
@@ -71,8 +69,6 @@ function LoginForm() {
           <option value="admin">Admin</option>
           <option value="user">User</option>
         </select>
-
-        {/* ورودی ایمیل */}
         <div className={styles.inputWrapper}>
           <FaUserAlt className={styles.inputIcon} />
           <input
@@ -84,8 +80,6 @@ function LoginForm() {
             disabled={!role}
           />
         </div>
-
-        {/* ورودی پسورد */}
         <div className={styles.inputWrapper}>
           <TbLockPassword className={styles.inputIcon} />
           <input
@@ -96,9 +90,7 @@ function LoginForm() {
             disabled={!role}
           />
         </div>
-
         <button disabled={!role}>Login</button>
-
         {message && <p>{message}</p>}
       </form>
     </div>

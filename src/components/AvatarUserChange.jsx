@@ -1,9 +1,8 @@
-import { useRef, useEffect  } from "react";
+import { useRef, useEffect } from "react";
 
 function AvatarUserChange({ formData, setFormData, onOpenFileDialog }) {
-  //  const {currentUser,setCurrentUser } = useContext(UserContext);
-  const fileInputRef = useRef()
-    const openFileDialog = () => {
+  const fileInputRef = useRef();
+  const openFileDialog = () => {
     fileInputRef.current.click();
   };
 
@@ -17,8 +16,7 @@ function AvatarUserChange({ formData, setFormData, onOpenFileDialog }) {
     const imageURL = URL.createObjectURL(file);
     setFormData((prev) => ({ ...prev, avatar: imageURL }));
   };
-   
-  
+
   return (
     <div>
       <img src={formData.avatar} width="80" />
@@ -30,7 +28,6 @@ function AvatarUserChange({ formData, setFormData, onOpenFileDialog }) {
         style={{ display: "none" }}
         onChange={handleAvatarChange}
       />
-      {/* <button onClick={() => fileInputRef.current.click()}>Edit Photo</button> */}
     </div>
   );
 }

@@ -32,7 +32,6 @@ function UserChangePassword({ currentPassword, onPasswordChange }) {
     setError("");
     setSuccess("Password changed successfully ✅");
 
-    // آپدیت فرم اصلی و currentUser
     onPasswordChange && onPasswordChange(passwords.newPassword);
 
     setPasswords({
@@ -54,48 +53,48 @@ function UserChangePassword({ currentPassword, onPasswordChange }) {
 
   return (
     <>
-    <div className={styles.container}>
-      <div className={styles.secondpart}>
-        <input
-          type="password"
-          placeholder="Current Password"
-          name="oldPassword"
-          value={passwords.oldPassword}
-          onChange={changePass}
-        />
-        <input
-          type="password"
-          placeholder="New Password"
-          name="newPassword"
-          value={passwords.newPassword}
-          onChange={changePass}
-        />
-        <input
-          type="password"
-          placeholder="Confirm New Password"
-          name="confirmPassword"
-          value={passwords.confirmPassword}
-          onChange={changePass}
-        />
-      </div>
+      <div className={styles.container}>
+        <div className={styles.secondpart}>
+          <input
+            type="password"
+            placeholder="Current Password"
+            name="oldPassword"
+            value={passwords.oldPassword}
+            onChange={changePass}
+          />
+          <input
+            type="password"
+            placeholder="New Password"
+            name="newPassword"
+            value={passwords.newPassword}
+            onChange={changePass}
+          />
+          <input
+            type="password"
+            placeholder="Confirm New Password"
+            name="confirmPassword"
+            value={passwords.confirmPassword}
+            onChange={changePass}
+          />
+        </div>
 
-      {error && <p className={styles.error}>{error}</p>}
-      {success && <p className={styles.success}>{success}</p>}
+        {error && <p className={styles.error}>{error}</p>}
+        {success && <p className={styles.success}>{success}</p>}
 
-      <div className={styles.theirdpart}>
-        <button onClick={saveHandler}>Save</button>
-        <button onClick={cancelHandler}>Cancel</button>
+        <div className={styles.theirdpart}>
+          <button onClick={saveHandler}>Save</button>
+          <button onClick={cancelHandler}>Cancel</button>
+        </div>
       </div>
-    </div>
-<div className={styles.backbtn}><button 
-  onClick={() => {
-    // فقط فرم پسورد بسته بشه و دوباره EditUserProfile نمایش داده بشه
-    onPasswordChange && onPasswordChange(currentPassword);
-  }}
->
-  Back
-</button></div>
-   
+      <div className={styles.backbtn}>
+        <button
+          onClick={() => {
+            onPasswordChange && onPasswordChange(currentPassword);
+          }}
+        >
+          Back
+        </button>
+      </div>
     </>
   );
 }

@@ -29,13 +29,11 @@
   }
 }
 
-/* Wrapper برای input و icon */
 .inputWrapper {
   position: relative;
   width: 100%;
 }
 
-/* Input اصلی */
 .inputWrapper input,
 .container form select {
   width: 100%;
@@ -46,7 +44,6 @@
   transition: 0.3s;
 }
 
-/* فاصله برای آیکون داخل input */
 .inputWrapper input {
   padding-left: 35px;
 }
@@ -58,7 +55,6 @@
   outline: none;
 }
 
-/* آیکون داخل input */
 .inputIcon {
   position: absolute;
   left: 10px;
@@ -74,13 +70,12 @@
   padding: 10px;
   border-radius: 12px;
   border: none;
-     background-color: blue;
+  background-color: blue;
   color: white;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
- 
 }
 
 .container form button:hover {

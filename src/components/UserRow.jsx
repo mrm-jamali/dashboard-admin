@@ -1,15 +1,12 @@
-
-import styles from "./UserRow.module.css";
-import { UserContext } from "../context/UserContext";
-import { useContext } from "react";
-import { FaRegTrashAlt } from "react-icons/fa";
-import { MdEdit } from "react-icons/md";
 import { useState } from "react";
 
-function UserRow({ user, onSaveRole }) {
-  // const { adminData } = useContext(UserContext);
-  // const {users,setUsers}=adminData
+import { UserContext } from "../context/UserContext";
+import { useContext } from "react";
+import styles from "./UserRow.module.css";
+import { FaRegTrashAlt } from "react-icons/fa";
+import { MdEdit } from "react-icons/md";
 
+function UserRow({ user, onSaveRole }) {
   const { adminData, setAdminData } = useContext(UserContext);
   const { users } = adminData;
 
@@ -17,7 +14,7 @@ function UserRow({ user, onSaveRole }) {
   const [tempRole, setTempRole] = useState(user.role);
 
   const saveHandler = () => {
-    onSaveRole(user.username, tempRole); // ارسال به والد
+    onSaveRole(user.username, tempRole);
     setIsedit(false);
   };
   const editHandler = () => {

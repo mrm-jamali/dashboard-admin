@@ -17,10 +17,10 @@ const UsersInformation = () => {
 
   const [search, setSearch] = useState("");
   const [role, setRole] = useState("");
-  const [currentPage, setCurrentPage] = useState(1); // مقدار اولیه ضروری
-  const itemsPerPage = 5; // تعداد آیتم‌ها در هر صفحه
+  const [currentPage, setCurrentPage] = useState(1); 
+  const itemsPerPage = 5;
 
-  // فیلتر بر اساس سرچ و نقش
+
   const filteredUsers = users.filter((user) => {
     const matchUsers =
       user.username.toLowerCase().includes(search.toLowerCase()) ||
@@ -29,12 +29,12 @@ const UsersInformation = () => {
     return matchUsers && matchRole;
   });
 
-  // محاسبه کاربران صفحه فعلی
+
   const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
   const currentUsers = filteredUsers.slice(start, end);
 
-  // تغییر نقش کاربر
+ 
   const onSaveRole = (username, newRole) => {
     const updatedUsers = users.map((u) =>
       u.username === username ? { ...u, role: newRole } : u
@@ -46,16 +46,16 @@ const UsersInformation = () => {
     console.log("Updated user:", username, newRole);
   };
 
-  // هندل سرچ
+  
   const searchHandler = (e) => {
     setSearch(e.target.value);
-    setCurrentPage(1); // وقتی سرچ می‌کنیم، دوباره صفحه اول
+    setCurrentPage(1); 
   };
 
-  // هندل فیلتر نقش
+ 
   const filterHandler = (e) => {
     setRole(e.target.value);
-    setCurrentPage(1); // وقتی فیلتر می‌کنیم، دوباره صفحه اول
+    setCurrentPage(1); 
   };
 
   return (
@@ -65,7 +65,7 @@ const UsersInformation = () => {
  <div className={styles.firstcon}>
   <div className={styles.title}> <h2>Users Management</h2></div>
     
-  {/* دسکتاپ */}
+{/* desktop design */}
   <div className={`${styles.desktopVersion}`}>
     <div className={styles.topNav}>
       <button onClick={() => navigate("add")}>
@@ -107,7 +107,7 @@ const UsersInformation = () => {
     </div>
   </div>
 
-  {/* موبایل */}
+{/* mobile design */}
  <div className={styles.mobileVersion}>
   <div className={styles.usersinfo}>
     {currentUsers.map((user) => (

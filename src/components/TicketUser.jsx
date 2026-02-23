@@ -6,7 +6,7 @@ function TicketUser() {
   const { adminData, currentUser } = useContext(UserContext);
 
   const userTickets = adminData.tickets.filter(
-    (ticket) => ticket.user === currentUser.username
+    (ticket) => ticket.user === currentUser.username,
   );
 
   const getPriorityClass = (priority) => {

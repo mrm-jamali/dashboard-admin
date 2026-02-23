@@ -1,6 +1,5 @@
-import React from "react";
-import styles from "./Sidbar.module.css";
 import { Link } from "react-router-dom";
+import styles from "./Sidbar.module.css";
 import { FaUser } from "react-icons/fa";
 import { RxActivityLog } from "react-icons/rx";
 import { TfiDashboard } from "react-icons/tfi";
