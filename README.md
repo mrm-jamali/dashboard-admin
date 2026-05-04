@@ -6,6 +6,16 @@ dashboard-admin is a fully responsive and dynamic admin panel built with Vite + 
 
 Key Features
 
+## Demo Login
+
+Admin:
+email: admin@test.com  
+password: 345  
+
+User:
+email: mj.jamali.it@gmail.com  
+password: 111  
+
 Admin Dashboard
 • Role-based login  
 • Three main menus:
