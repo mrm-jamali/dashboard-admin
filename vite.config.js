@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/reactdashboard/',
+  base: '/dashboard-admin/', // ← حتما اسم ریپو جدید
   plugins: [react()],
 })

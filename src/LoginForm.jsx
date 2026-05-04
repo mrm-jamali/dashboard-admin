@@ -11,14 +11,28 @@ function LoginForm() {
 
   const { users, admins } = adminData;
 
-  const [role, setRole] = useState(""); 
+  const [role, setRole] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
+  // demo accounts
+  const demoAccounts = {
+    admin: {
+      email: "jamali8820@yahoo.com",
+      password: "345",
+      role: "admin",
+    },
+    user: {
+      email: "mj.jamali.it@gmail.com",
+      password: "111",
+      role: "user",
+    },
+  };
+
   const handleEmailClick = () => {
     if (!role) {
-      setMessage("⚠️ Please select your role first");
+      setMessage(" Please select your role first");
     }
   };
 
@@ -26,7 +40,7 @@ function LoginForm() {
     e.preventDefault();
 
     if (!role) {
-      setMessage("⚠️ Please select a role");
+      setMessage(" Please select a role");
       return;
     }
 
@@ -35,12 +49,12 @@ function LoginForm() {
     const foundUser = list.find((u) => u.email === email);
 
     if (!foundUser) {
-      setMessage("❌ Email not found");
+      setMessage(" Email not found");
       return;
     }
 
     if (foundUser.password !== password) {
-      setMessage("❌ Incorrect password");
+      setMessage(" Incorrect password");
       return;
     }
 
@@ -52,10 +66,21 @@ function LoginForm() {
     else navigate("/user");
   };
 
+  //  auto fill function
+  const fillDemo = (type) => {
+    const acc = demoAccounts[type];
+
+    setRole(acc.role);
+    setEmail(acc.email);
+    setPassword(acc.password);
+    setMessage("");
+  };
+
   return (
     <div className={styles.container}>
       <form onSubmit={submitHandler}>
         <h2>User/Admin Login</h2>
+
         <select
           value={role}
           onChange={(e) => {
@@ -69,6 +94,8 @@ function LoginForm() {
           <option value="admin">Admin</option>
           <option value="user">User</option>
         </select>
+
+        {/* Email */}
         <div className={styles.inputWrapper}>
           <FaUserAlt className={styles.inputIcon} />
           <input
@@ -80,6 +107,8 @@ function LoginForm() {
             disabled={!role}
           />
         </div>
+
+        {/* Password */}
         <div className={styles.inputWrapper}>
           <TbLockPassword className={styles.inputIcon} />
           <input
@@ -90,7 +119,28 @@ function LoginForm() {
             disabled={!role}
           />
         </div>
+
         <button disabled={!role}>Login</button>
+
+        <div className={styles.demoButtons}>
+          <button type="button" onClick={() => fillDemo("admin")}>
+            Login as Admin
+          </button>
+
+          <button type="button" onClick={() => fillDemo("user")}>
+            Login as User
+          </button>
+        </div>
+
+        {/*  demo info */}
+        <div style={{ marginTop: "15px", fontSize: "13px", opacity: 0.8 }}>
+          <p>
+            <b>Demo Accounts:</b>
+          </p>
+          <p>Admin → jamali8820@yahoo.com / 456</p>
+          <p>User → mj.jamali.it@gmail.com/ 111</p>
+        </div>
+
         {message && <p>{message}</p>}
       </form>
     </div>

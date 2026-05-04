@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
 
-  "homepage": "https://mrm-jamali.github.io/reactdashboard",
+  "homepage": "https://mrm-jamali.github.io/dashboard-admin",
 
   "scripts": {
     "dev": "vite",

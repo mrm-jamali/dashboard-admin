@@ -93,3 +93,35 @@
   text-align: center;
   padding: 25px 0;
 }
+
+.demoButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.demoButtons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: #4f7cff;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.demoButtons button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(79, 124, 255, 0.35);
+}
+
+.demoInfo {
+  margin-top: 12px;
+  font-size: 12px;
+  text-align: center;
+  color: #666;
+  line-height: 1.6;
+}
